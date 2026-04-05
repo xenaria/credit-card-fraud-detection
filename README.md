@@ -6,7 +6,7 @@ Using [Credit Card Fraud  Detection Dataset](https://www.kaggle.com/datasets/mlg
 
 This project explores multiple machine learning approaches for detecting fraudulent credit card transactions on an imbalanced dataset. The goal is to compare traditional models, deep learning, anomaly detection, and state-of-the-art techniques to identify the most effective solution.
 
----
+
 
 ## Project Overview
 
@@ -19,7 +19,7 @@ We implement and compare:
 - Autoencoder (Anomaly Detection)
 - XGBoost (State-of-the-Art for Tabular Data)
 
----
+
 
 ## Dataset
 
@@ -28,7 +28,7 @@ We implement and compare:
   - Normal transactions ≫ Fraud transactions
 - Features are anonymized (PCA-transformed)
 
----
+
 
 ## Methods
 
@@ -37,7 +37,7 @@ We implement and compare:
 - Uses BCE loss without weighting
 - Serves as a reference model
 
----
+
 
 ### 2. Weighted Neural Network
 - Uses `BCEWithLogitsLoss(pos_weight=...)`
@@ -47,14 +47,13 @@ We implement and compare:
   - Learning rate scheduler
   - Threshold tuning
 
----
 
 ### 3. Autoencoder (Anomaly Detection)
 - Trained only on normal transactions
 - Detects fraud via reconstruction error
 - Threshold-based classification
 
----
+
 
 ### 4. XGBoost (SOTA)
 - Gradient boosting model optimized for tabular data
@@ -62,7 +61,6 @@ We implement and compare:
 - No manual training loop required
 - Strong performance in real-world fraud detection systems
 
----
 
 ## Evaluation Metrics
 
@@ -76,7 +74,7 @@ Due to class imbalance, multiple metrics are used:
 - Balanced Accuracy
 - Confusion Matrix (normalized)
 
----
+
 
 ## Key Results
 
@@ -85,7 +83,7 @@ Due to class imbalance, multiple metrics are used:
 | Weighted NN | 0.7941 | **0.8265** | 0.8100 | 0.7387 |
 | XGBoost | **0.9390** | 0.7857 | **0.8556** | **0.8697** |
 
----
+
 
 ### Insights
 
@@ -95,7 +93,7 @@ Due to class imbalance, multiple metrics are used:
 - Autoencoder performed well for anomaly detection but lacked precision compared to supervised models.
 - GNN showed limited effectiveness due to lack of relational data.
 
----
+
 
 ## Model Trade-offs
 
@@ -105,13 +103,12 @@ Due to class imbalance, multiple metrics are used:
 | XGBoost | High precision & F1 | Slightly lower recall |
 | Autoencoder | Detects anomalies | Less accurate classification |
 
----
 
 ## Key Takeaway
 
 XGBoost is the most suitable model for this task due to its strong performance on tabular data, ability to handle imbalance, and superior precision-recall balance.
 
----
+
 
 ## Tech Stack
 
@@ -121,7 +118,7 @@ XGBoost is the most suitable model for this task due to its strong performance o
 - XGBoost
 - Matplotlib / Seaborn
 
----
+
 
 ##  Project Structure
 ```
@@ -137,7 +134,6 @@ XGBoost is the most suitable model for this task due to its strong performance o
 ├── README.md
 └── requirements.txt
 ```
----
 
 ## How to Run
 
@@ -148,7 +144,7 @@ XGBoost is the most suitable model for this task due to its strong performance o
 
 2. Run notebooks in order
 
----
+
 
 ## Authors
 
@@ -158,7 +154,7 @@ XGBoost is the most suitable model for this task due to its strong performance o
 | Lindero Dianthe Marithe Lumagui | |
 | Karen Neo                       | |
 
----
+
 
 ## References
 
