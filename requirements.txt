@@ -5,9 +5,11 @@ matplotlib
 
 # Machine Learning
 scikit-learn
+xgboost
 
 # Optional (safe to include)
 tqdm
 
 # Visualization
 seaborn
+
