@@ -1,0 +1,13 @@
+# Core
+numpy
+pandas
+matplotlib
+
+# Machine Learning
+scikit-learn
+
+# Optional (safe to include)
+tqdm
+
+# Visualization
+seaborn
