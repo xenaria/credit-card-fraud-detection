@@ -1,6 +1,15 @@
-*.json
-*.zip
+# Data files
 *.csv
-
-kaggle/
+*.zip
 data/
+
+# Kaggle API
+kaggle/
+
+# Python
+__pycache__/
+*.pyc
+
+# Env
+venv/
+.env
