@@ -2,6 +2,7 @@
 *.csv
 *.zip
 data/
+trash/
 
 # Kaggle API
 kaggle/
