@@ -14,8 +14,8 @@ Fraud detection is a highly imbalanced classification problem where fraudulent t
 
 We implement and compare:
 
-- Baseline Neural Network
-- Weighted Neural Network (Cost-Sensitive Learning)
+- Baseline Feedforward Neural Network (BNN)
+- Weighted Feedforward Neural Network (WNN) (Cost-Sensitive Learning)
 - Autoencoder (Anomaly Detection)
 - XGBoost (State-of-the-Art for Tabular Data)
 
@@ -78,10 +78,12 @@ Due to class imbalance, multiple metrics are used:
 
 ## Key Results
 
-| Model | Precision | Recall | F1 Score | PR-AUC |
-|------|----------|--------|----------|--------|
-| Weighted NN | 0.7941 | **0.8265** | 0.8100 | 0.7387 |
-| XGBoost | **0.9390** | 0.7857 | **0.8556** | **0.8697** |
+| Model | Precision | Recall | F1-score | ROC-AUC | PR-AUC |
+|------|----------:|-------:|---------:|--------:|-------:|
+| BNN | 0.2788 | **0.8878** | 0.4244 | 0.9757 | 0.9959 |
+| WNN | 0.8333 | 0.8163 | 0.8247 | **0.9818** | 0.7326 |
+| XGBoost | **0.9186** | 0.8061 | **0.8587** | 0.9790 | **0.8657** |
+| Autoencoder | 0.7857 | 0.5612 | 0.6548 | 0.9590 | 0.6526 | :contentReference[oaicite:17]{index=17}
 
 
 
@@ -120,20 +122,24 @@ XGBoost is the most suitable model for this task due to its strong performance o
 
 
 
-##  Project Structure
+## Project Structure
 ```
-├── data/ # Dataset (ignored in Git)
-├── notebooks/ # Jupyter notebooks
-│ ├── baseline.ipynb
-│ ├── weighted_model.ipynb
-│ ├── autoencoder.ipynb
-│ ├── xgboost.ipynb
-│ └── gnn.ipynb
-├── models/ # Saved models
-├── utils/ # Helper functions
+├── data/                              # Dataset files (ignored in Git)
+├── images/                            # Figures used in report / README
+├── notebooks/                         # Jupyter notebooks
+│   ├── ExploratoryDataAnalysis.ipynb
+│   ├── BaselineFFN_original.ipynb
+│   ├── BaselineFFN_corrected.ipynb
+│   ├── WeightedClassifier.ipynb
+│   ├── WeightedClassifier_ft.ipynb
+│   ├── Autoencoder.ipynb
+│   └── SOTA_XGBoost.ipynb
+├── models/                            # Saved model weights
+│   ├── best_weighted_fraud_model.pt
+│   └── last_weighted_fraud_model.pt
+├── Group 3 - Deep Learning Project Report.pdf
 ├── README.md
 └── requirements.txt
-```
 
 ## How to Run
 
